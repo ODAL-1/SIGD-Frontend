@@ -5,7 +5,7 @@ S.I.G.D. - Sistema de Información y Gestión Deportiva
 S.I.G.D. es una plataforma web diseñada para la gestión integral de datos deportivos, permitiendo a usuarios y profesionales del sector seguir de cerca torneos, equipos y estadísticas detalladas de jugadores. Este repositorio contiene el desarrollo del Frontend. 
 
 
-🚀 Sobre el Proyecto
+Sobre el Proyecto
 El objetivo de esta plataforma es centralizar la información deportiva de manera clara y no invasiva. El diseño se centra en la usabilidad y la armonía visual, utilizando una paleta de colores estratégica para diferenciar las disciplinas:
 
 🟢 Verde: Fútbol.
@@ -42,7 +42,7 @@ Panel de Juez
 Panel de Scout
 
 
-🎨 Diseño de Interfaz (Wireframes)
+Diseño de Interfaz (Wireframes)
 El frontend ha sido proyectado siguiendo esquemas de diseño (wireframes) que garantizan una experiencia de usuario (UX) coherente.
 
 
