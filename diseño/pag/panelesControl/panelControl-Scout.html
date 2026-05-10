@@ -1,0 +1,388 @@
+<html>
+
+<head>
+    <title>Sprinet</title>
+
+    <meta charset="utf-8" lang="es" description="panelControl">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="../../img/logo-Sprinet.png">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/css_personalizado.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/dev/favicon.png">
+
+    <script src="https://unpkg.com/grade-js/docs/dist/grade.js"></script>
+    <script src="../../js/personalizado.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
+</head>
+
+<body>
+    <!--    APERTURA DE NAV    -->
+    <nav class="bg-Nav navbar navbar-expand-lg navbar-dark fixed-top">
+        <header class="navbar-header">
+            <!--BOTON PARA DESPLEGAR MENU EN VERSION MOVIL-->
+            <button class="navbar-toggler collapsed mb-1" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- ICONO DE LAS TRES BARRITAS -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand ml-2">
+                <img src="../../img/logo-Sprinet-inv.png" class="logoSprinet">
+            </a>
+        </header>
+        <!-- APERTURA DE DIV CONTENEDOR DE BOTONES (ESTE CONTENEDOR SIRVE PARA MOSTAR O ESCONDER BOTONES EN VERSION DE MOVIL) -->
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Inicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link PanelControl" href="#">Panel de control</a>
+                </li>
+            </ul>
+            <!--APERTURA FORMULARIO BARRA DE BUSQUEDA-->
+            <form class="form-inline my-auto ml-auto justify-content-right" method="POST" action="php/buscar.php">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+            <!--CIERRE FORMULARIO BARRA DE BUSQUEDA-->
+        </div>
+        <!-- CIERRE DE DIV CONTENEDOR DE LOS BOTONES-->
+    </nav>
+    <!-- CIERRE DE NAV -->
+
+    <!-- APERTURA DE CONTENEDOR PRINCIPAL -->
+    <section class="container-fluid justify-content-center">
+        <div class="contCentrado text-center">
+            <center>
+
+
+
+                <section class="contPanelControl">
+                    <p class="titulo-rol"> PANEL DE CONTROL -- SCOUT</p>
+                    <div class="cont-asideYfunciones">
+                        <!-- BOTONES -->
+                        <aside class="asideBotones">
+
+                            <!-- Scout -->
+
+                            <button type="button" class="btn-estilo btn-sm">
+                                Reclutar Jugador
+                            </button>
+
+                        </aside>
+
+                        <!-- aca van todos los formularios de las funciones para los diferente roles-->
+                        <div class="seccionFunciones">
+
+                            <!-- |||||| SCOUT |||||| -->
+                            <!-- Reclutar Jugador -->
+                            <section class="seccionFuncion">
+                            <form method="POST" action="">
+                                <p class="tituloPanel"> Seccion Scout -- Reclutar Jugador</p>
+                                <select class="estilo-Select" name="scoutBuscador">
+                                    <option> Futbol </option>
+                                    <option> Basketball </option>
+                                    <option> Handball </option>
+                                </select> <br>
+                                    <div class="table-responsive">
+                                        <table class="table-res table table-bordered table-dark">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Apellido</th>
+                                                    <th>Email</th>
+                                                    <th>Altura</th>
+                                                    <th>Peso</th>
+                                                    <th>Seleccionar</th>
+                                                    <th>Ver Ficha</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-titulo="Nombre:"> ... </td>
+                                                    <td data-titulo="Apellido:"> ... </td>
+                                                    <td data-titulo="Email:"> ... </td>
+                                                    <td data-titulo="Altura:"> ... </td>
+                                                    <td data-titulo="Peso:"> ... </td>
+                                                    <td data-titulo="Seleccionar:"> <input type="checkbox" name="seleccionJugador"> </td>
+                                                    <td data-titulo="Ver Ficha:"> <input type="button" name="ver" value="Ver"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-titulo="Nombre:"> ... </td>
+                                                    <td data-titulo="Apellido:"> ... </td>
+                                                    <td data-titulo="Email:"> ... </td>
+                                                    <td data-titulo="Altura:"> ... </td>
+                                                    <td data-titulo="Peso:"> ... </td>
+                                                    <td data-titulo="Seleccionar:"> <input type="checkbox" name="seleccionJugador"> </td>
+                                                    <td data-titulo="Ver Ficha:"> <input type="button" name="ver" value="Ver"> </td>
+                                                </tr>
+                                            </tbody>
+
+                                        </table>
+                                </div>
+                                <input type="button" name="reclutar" value="Reclutar" class="boton">
+                            </form>
+                            
+                            <div class="table-responsive">
+                                <caption> Jugadores Reclutados:</caption>
+                                <table class="table-res table table-bordered table-dark">
+                                    <thead>
+                                        <tr>
+                                            <th>Jugador</th>
+                                            <th>Email</th>
+                                            <th>Seleccionar</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-titulo="Jugador:"> ... </td>
+                                            <td data-titulo="Email:"> ... </td>
+                                            <td data-titulo="Seleccionar:"> <input type="checkbox" name="seleccionJugador"> </td>
+                                            <td data-titulo="Eliminar:"> <input type="button" name="eliminar" value="Eliminar"> </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-titulo="Jugador:"> ... </td>
+                                            <td data-titulo="Email:"> ... </td>
+                                            <td data-titulo="Seleccionar:"> <input type="checkbox" name="seleccionJugador"> </td>
+                                            <td data-titulo="Eliminar:"> <input type="button" name="eliminar" value="Eliminar"> </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <label tipe="text" class="pt-2">Entrenadores</label>
+                                <select class="comboBox-form" name="Entrenadores">
+                                    <option> </option>
+                                    <option> </option>
+                                </select>
+                                <br>
+                            <input type="button" name="sugerir" value="Sugerir" class="boton">
+                        </section>
+                        </div>
+                        <!-- cierre de todos los formularios de las funciones para los diferente roles-->
+                    </div>
+                </section>
+
+
+
+            </center>
+        </div>
+    </section>
+    <!-- CIERRE DE CONTENEDOR PRINCIPAL -->
+
+    <!-- APERTURA DE FOOTER -->
+    <footer class="bg-Footer text-white text-center fixed-bottom">
+        <p class="m-auto p-2">Sitio hecho por <span>Lovelace Solutions </span><img src="../../img/lovelace.png"
+                style="width: 24px;"><br>Puedes contactarnos en: <span><b>solutionslovelace@gmail.com</b></span></p>
+    </footer>
+    <!-- CIERRE DE FOOTER -->
+
+
+
+
+
+
+
+    <!-- 
+            /////////////////////////////////////
+
+
+
+            /SEPARADOR DE FORMULARIOS EMERGENTES/
+
+
+
+            /////////////////////////////////////
+         -->
+    <!-- 
+            /////////////////////////////////
+            COMIENZO DE FORMULARIO DE SOPORTE
+            /////////////////////////////////
+         -->
+    <div class="modal fade" id="soporte" tabindex="-1" role="dialog" aria-labelledby="Soporte" aria-hidden="true">
+        <!-- APERTURA DIALOGO MODAL -->
+        <div class="modal-dialog" role="document">
+            <!-- APERTURA CONTENEDOR MODAL -->
+            <div class="modal-content">
+                <!-- APERTURA HEADER MODAL-->
+                <header class="modal-header">
+                    <h5 class="modal-title" id="soporte">Soporte</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </header>
+                <!-- CIERRE HEADER MODAL Y APERTURA DE FORMULARIO-->
+                <form method="POST">
+                    <section class="modal-body text-center ">
+                        <ul class="list-unstyled">
+                            <label for="email" class="pt-2">Ingrese su email</label>
+                            <li>
+                                <input type="email" name="email" class="form-control">
+                            </li>
+                            <label for="consulta" class="pt-2">Ingrese su consulta <br> (Máximo 255 caracteres)</label>
+                            <li>
+                                <textarea maxlength="255" rows="10" cols="40" name="consulta"
+                                    class="form-control"></textarea>
+                            </li>
+                        </ul>
+                    </section>
+                    <footer class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <input type="submit" class="btn btn-warning" value="Enviar">
+                    </footer>
+                </form>
+                <!-- CIERRE DE FORMULARIO ^^ Y DE CONTENEDOR MODAL vv-->
+            </div>
+        </div>
+    </div>
+    <!-- 
+            //////////////////////////////
+            /FIN DE FORMULARIO DE SOPORTE/
+            //////////////////////////////
+         -->
+
+    <!-- 
+            //////////////////////////////////////////
+            COMIENZO DE FORMULARIO DE INICIO DE SESION
+            //////////////////////////////////////////
+         -->
+    <div class="modal fade" id="iniciarSesion" tabindex="-1" role="dialog" aria-labelledby="Inicio de sesión"
+        aria-hidden="true">
+        <!-- APERTURA DIALOGO MODAL -->
+        <div class="modal-dialog" role="document">
+            <!-- APERTURA CONTENEDOR MODAL -->
+            <div class="modal-content">
+                <!-- APERTURA HEADER MODAL-->
+                <header class="modal-header">
+                    <h5 class="modal-title" id="iniciarSesion">Inicio de sesión</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </header>
+                <!-- CIERRE HEADER MODAL Y APERTURA DE FORMULARIO-->
+                <form method="POST">
+                    <section class="modal-body text-center ">
+                        <ul class="list-unstyled">
+                            <label for="email" class="pt-2">E-mail</label>
+                            <li>
+                                <input type="email" name="email" class="form-control">
+                            </li>
+                            <label for="contra" class="pt-2">Contraseña</label>
+                            <li>
+                                <input type="password" name="contra" class="form-control">
+                            </li>
+                            <li class="my-3">
+                                <input type="checkbox" class="form-check-input" name="recordar">
+                                <label class="form-check-label" for="recordar">Recordarme</label>
+                            </li>
+                        </ul>
+                    </section>
+                    <footer class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <input type="submit" class="btn btn-warning" value="Iniciar sesión">
+                    </footer>
+                </form>
+                <!-- CIERRE DE FORMULARIO ^^ Y DE CONTENEDOR MODAL vv-->
+            </div>
+        </div>
+    </div>
+    <!-- 
+            ///////////////////////////////////////
+            /FIN DE FORMULARIO DE INICIO DE SESION/
+            ///////////////////////////////////////
+         -->
+
+    <!-- 
+            ////////////////////////////////////
+            /COMIENZO DE FORMULARIO DE REGISTRO/
+            ////////////////////////////////////
+         -->
+    <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="Registro" aria-hidden="true">
+        <!-- APERTURA DIALOGO MODAL-->
+        <div class="modal-dialog" role="document">
+            <!-- APERTURA CONTENEDOR MODAL-->
+            <div class="modal-content">
+                <!-- TITULO -->
+                <header class="modal-header">
+                    <h5 class="modal-title" id="registro">Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </header>
+                <!-- FIN TITULO DE MODAL ^^ Y COMIENZO DE FORMULARIO vv-->
+                <form method="GET" action="test.php">
+                    <!-- APERTURA DE SECCION DE FORMULARIO -->
+                    <section class="modal-body text-center">
+                        <ul class="list-unstyled">
+                            <label for="email" class="pt-2">Nombre</label>
+                            <li>
+                                <input type="text" name="nombre" class="form-control">
+                            </li>
+                            <label for="email" class="pt-2">Apellido</label>
+                            <li>
+                                <input type="text" name="apellido" class="form-control">
+                            </li>
+                            <label for="email" class="pt-2">CI</label>
+                            <li>
+                                <input type="number" name="CI" class="form-control">
+                            </li>
+                            <label for="email" class="pt-2">E-mail</label>
+                            <li>
+                                <input type="email" name="email" class="form-control">
+                            </li>
+                            <label for="contra" class="pt-2">Contraseña</label>
+                            <li>
+                                <input type="password" name="contra" class="form-control" data-toggle="text">
+                            </li>
+                            <label for="contra" class="pt-2">Confirmar contraseña</label>
+                            <li>
+                                <input type="password" name="confContra" class="form-control">
+                            </li>
+                            <label for="email" class="pt-2">Fecha de nacimiento</label>
+                            <li>
+                                <input type="date" name="fnac" class="form-control">
+                            </li>
+                            <li class="my-3">
+                                <input type="checkbox" class="form-check-input" name="tyc">
+                                <label class="form-check-label" for="tyc">Estoy de acuerdo con los TyC</label>
+                            </li>
+                            <li>
+                                <select class="estilo-Select" name="incidencias">
+                                    <option> Usuario </option>
+                                    <option> Analista </option>
+                                    <option> Juez </option>
+                                    <option> Scout </option>
+                                    <option> Jugador </option>
+                                    <option> Administrativo </option>
+                                    <option> Entrenador </option>
+                                </select>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- CIERRE DE SECCION DE FORMULARIO ^^ Y APERTURA DE FOOTER vv -->
+                    <footer class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <input type="submit" class="btn btn-warning" value="¡Registrarme!">
+                    </footer>
+                    <!-- CIERRE DE FOOTER ^^ Y DE FORMULARIO vv -->
+                </form>
+            </div>
+            <!-- CIERRE CONTENEDOR MODAL-->
+        </div>
+        <!-- CIERRE DIALOGO MODAL-->
+    </div>
+    <!-- 
+            ////////////////////////////////////
+            /FIN DE FORMULARIO DE REGISTRO/
+            ////////////////////////////////////
+         -->
+</body>
+
+</html>

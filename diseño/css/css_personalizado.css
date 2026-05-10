@@ -1,0 +1,1257 @@
+
+body
+{
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+	/* 
+		////////
+			Añadí padding top y bottom con el fin de solucionar
+			un problema que se producía al implementar fixed-top al nav y fixed-bottom al footer.
+			Este problema causaba que el nav y el footer se superpusieran por encima del contenedor
+			de la sección principal, tapando el contenido de las páginas en cuestión.
+		///////
+	*/
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+.modal .modal-header {
+    color: white;
+    background-color:  #1b2353;
+}
+
+.modal .modal-content {
+    color: white;
+    background-color:  #161e47ee;
+}
+.modal-backdrop {
+    background-color: rgba(6, 13, 49, 0.774)
+}
+.contenedorPanel
+{
+    overflow-y:scroll;
+    min-height: 256px; 
+}
+
+.bg-Articulo
+{
+    background-color:  #202a63;
+    border-bottom-style: dotted;
+    border-bottom: thick green;
+}
+.bg-Seccion
+{
+    background-color: #EEEEEE;
+}
+.bg-Footer
+{
+    background-color: #1d1d1d;
+}
+.bg-Footer span
+{
+    color: aquamarine;
+}
+.bg-Nav
+{
+    background-color: #101531DD;
+}
+.bg-MenuNav
+{
+    background-color: #010418aa;
+}
+.jumbotron
+{
+    background-color: #ff8c0088;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
+}
+.contCentrado{
+    background-color: #AAAAAACC;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.logoSprinet{
+    width: 48px;
+}
+
+
+/*
+||||||||||||||||||||
+SECCION DE PARTIDOS Y TORNEOS (ambas interfaces tienen un diseño similar): 
+||||||||||||||||||||
+*/
+.partidosDisputados, .partidosProximos, .torneosDisputados, .torneosProximos{
+    display: inline-block;
+    background-color: #b41010;
+    padding: 1em;
+    border: #ffffff;
+    border-radius: 1em;
+    color: white;
+    box-shadow: 3px 3px 5px rgb(65, 1, 1);
+    min-width: 15vw;
+    font-size: 1.2em;
+    font-family: 'Lora', serif;
+    margin-right: 1em;
+}
+.contenedorTorneo{
+    position: relative;
+    width: 80vw;
+    height: 10vw;
+    margin: 1em;
+    box-shadow: 5px 5px 5px rgb(97, 97, 97);
+}
+.contenedorPartido{
+    position: relative;
+    width: 25vw;
+    height: 20vw;
+    margin: 1em;
+}
+.contDentro{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50% ,-30%);
+    font-family: 'Luckiest Guy', cursiva;
+}
+.px-edit{
+    font-size: 2.5vw;
+}
+.px-2{
+    display: block;
+    width: 100%;
+    font-size: 3vw;
+    margin: inherit;
+}
+.botonPartido, .botonTorneo{
+    position: absolute;
+    font-size: 2vw;
+    background-image: linear-gradient(to top, rgb(26, 2, 112), rgb(31, 8, 161));
+    border-color: rgb(90, 46, 5);
+    color: rgb(255, 255, 255);
+    padding: 5 8 5 8;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    font-family: 'Rubik Iso', cursiva;
+}
+.botonTorneo{
+    border-color: rgb(0, 0, 0);
+}
+
+/*
+||||||||||||||||||||
+SECCION DE EQUIPOS: 
+||||||||||||||||||||
+*/
+.seccionEquipo{
+    text-align: center;
+    position: relative;
+    margin:2%;
+    display: inline-block;
+    border-radius: 10px;
+    border: 5px double green;
+    width: 14vw;
+    height: 9vw;
+    transition: 0.5s;
+}
+.seccionEquipo img{
+    border-radius: 10px; 
+    width: 100%;
+    height: 100%;
+}
+.seccionEquipo:hover{
+    transition: 0.5s;
+    width: 15vw;
+    height: 10vw;
+}
+.textoEquipo{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    width: 100%;
+    font-size: 1.5vw;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+
+/*
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+SECCION DE DEPORTES: 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+
+    .DivDeporte{
+        text-align: center;
+        position: relative;
+        opacity: 0.8;
+        display: inline-block;
+        padding: 15px;
+        margin: 16px;
+        margin-bottom: 15px;
+        width: 25vw;
+        height: 60vh;
+        transition: 0.5s;
+    }
+    .DivDeporte img{
+        width: 100%;
+        height: 100%;
+    }
+    /* texto superpuesto de los deportes: */
+    .DivDeporte .titulo{
+        font-family: 'Luckiest Guy', cursive;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        color: white;
+        position: absolute;
+        font-size: 3vw;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+    .DivDeporte .texto{
+        font-family: 'Amaranth', sans-serif;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 50%;
+        padding: 10px 0px;
+        color: white;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        transition: 0.5s;
+    }
+    .DivDeporte .texto p
+    {
+        padding:4% 0 0;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 1.2vw;
+        transition: 0.5s;
+    }
+    .dirigir:hover .DivDeporte{
+        width: 27vw;
+        height: 63vh;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+    .dirigir:hover .DivDeporte .titulo{
+        font-size: 3vw;
+        background-image: url(../img/fondoTitulo.jpg);
+        outline: 1px double;
+        border-radius: 10px;
+        color: white;
+        transition: 0.5s;
+
+    }
+    .dirigir:hover .DivDeporte .texto{
+        border-radius: 10px;
+        border: 1px double;
+        transition: 0.5s;
+        height: 60%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .dirigir:hover .DivDeporte .texto p{
+        font-size: 1.2vw;
+        padding:4%;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+SECCION DE EQUIPO (en esta seccion mostramos la info del equipo y sus integrantes) 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+.contCentrado .nEquipo{
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 3vw;
+    background-color: rgba(92, 121, 254, 0.5);
+}
+.contCentrado #fotoEquipo{
+    width: 28vw;
+    height: 20vw;
+    border-radius: 10px;
+}
+.contCentrado .listaContenedor{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.contCentrado .listaContenedor #listaEquipo{
+    font-size: 2vw;
+    display: inline-block;
+    text-align: center;
+    width: 90%;
+    list-style-type: decimal-leading-zero;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 4vw;
+
+    background-color: rgba(3, 13, 73, 0.5);
+    
+}
+.contCentrado .listaContenedor #listaEquipo a{
+    text-decoration: none;
+}
+.contCentrado .listaContenedor #listaEquipo a .contenedorLista-li{
+    color: white;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: rgba(9, 22, 99, 0.9);
+    min-height: 10vw;
+    width: 95%; 
+}
+.contCentrado .listaContenedor #listaEquipo a .contenedorLista-li .nameJugador{
+    display: inline;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 5vw;
+    color: white;
+}
+.contCentrado .listaContenedor #listaEquipo a #fotoPerfil{
+    border-radius: 5px;
+    float: left;
+    width: 10vw;
+    height: 10vw;
+}
+.contCentrado .listaContenedor #listaEquipo a .contCamiseta #camiseta{
+    border-radius: 5px;
+    width: 10vw;
+    height: 10vw;
+}
+.contCentrado .listaContenedor #listaEquipo a .contenedorLista-li .contCamiseta{
+    position: relative;
+    float: right;
+    width: 10vw;
+    height: 10vw;
+}
+.contCentrado .listaContenedor #listaEquipo a .contenedorLista-li .contCamiseta .textoCamiseta{
+    color: black;
+    font-size: 2vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+.contCentrado .listaContenedor #listaEquipo a .contenedorLista-li:hover{   
+    background-color: rgba(9, 22, 75, 0.9);
+    transition: 0.3s;
+}
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+SECCION DE Jugador (integrantes de los equipos) (en esta seccion mostramos la info del jugador seleccionado
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+    /*
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    rgb (0,0,139) azul
+    rgb (0,128,0) verde
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
+
+
+.contenidoJugador{
+    outline: 3px solid rgba(2,0,35,1.0);
+    border-radius: 5px;
+    background-color: rgba(0,0,40,0.9);
+    margin: 50px;
+}
+.contenidoJugador h2{
+    color: white;
+    background-color: rgba(9, 22, 75, 0.9);
+    padding: 10px;
+    font-size: 4vw;
+    font-family: 'Lora', 'Courier New', 'Amaranth', sans-serif;
+}
+.contenidoJugador #imgPerfil{
+    margin: 20px;
+    width: 30%;
+    border-radius: 50%;
+    float: right;
+    border: 2px solid rgba(59,56,255,0.5);
+}
+.contenidoJugador #listaEstadisticas{
+    padding-left: 4vw;
+    text-align: left;
+    color: white;
+    font-size: 3vw;
+}
+.tipo, .valorEstadistica{
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Bangers', cursive;
+    font-size: 2vw;
+}
+.tipo{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-image: linear-gradient(to top, #1303A3, #0A025B);
+    border-top: 2px solid #1403B2;
+    border-left: 4px solid #1403B2;
+    border-bottom: 2px solid #090155;
+    width: 30%;
+    min-width: 110px;
+}
+.valorEstadistica{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-image: linear-gradient(to top, rgb(0,128,0), #034B00);
+    border-top: 2px solid #08BD02;
+    border-right: 4px solid #08BD02;
+    border-bottom: 2px solid #012A00;
+    background-color: rgb(0,128,0);
+    width: 20%;
+}
+
+/*<<Estilo Iñaki>>*/
+/*<<Creamos F1 y contColor, para ajustar la información variable.>>*/
+/*// MODIFIQUÉ LAS REGLAS, REEMPLAZANDO LAS IDS' POR CLASES //*/
+.contenedorInfoDeporte{
+    background-color: rgba(238, 183, 34, 0.63);
+    border-top-left-radius: 10vw;
+    border-top-right-radius: 10vw;
+    padding-left: 7em;
+    padding-right: 7em;
+    margin: 5%;
+    padding-bottom: 2em;
+
+}
+.informacion{
+    background-color: none;
+}
+.titulo-Deportes_info{
+    color: #000000;
+    text-shadow: 2px 2px 3px rgba(38, 0, 255, 0.658);
+}
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+SECCION DE PARTIDO (ESTADISTICAS)
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+.contInfoPartido{
+    padding: 5px;
+    color: white;
+    width: 100%;
+}
+.tituloInfo{
+    color: #ece45f;
+    margin: 0;
+    margin-bottom: 5px;
+    width: 50%;
+    background-image: linear-gradient(to top, rgba(0, 4, 172, 0.85), rgba(0, 11, 255, 0.8));
+    border-bottom-left-radius: 30px; 
+    border-bottom-right-radius: 30px;
+    font-size: 2vw;
+    border-bottom: 5px rgba(0, 11, 255) solid;
+}
+.contResultado{
+    background-color: rgba(1, 61, 6, 0.85);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.contInfoPartido img{
+    display: inline-block;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    margin-bottom: 5px;
+}
+.caja{
+    display: inline-block;
+    margin-top: 5px;
+}
+.equipo1, .equipo2{
+    display: inline-block;
+    font-size: 2vw;
+
+}
+.separador{
+    display: inline-block;
+    font-size: 3vw;
+}
+.puntajeEquipo2, .puntajeEquipo1{
+    font-size: 3vw;
+}
+.contEstadisticasPartido{
+    background-color: rgba(0, 71, 6, 0.85);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 2em;
+}
+.tabla-contEstadisticasPartido{
+    width: 100%;
+    color: white;
+}
+.valorEquipo1, .valorEquipo2{
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    background-image: linear-gradient(to top, rgba(0, 4, 172, 0.85), rgba(0, 1, 37, 0.85));
+    font-size: 2vw;
+    margin: inherit;
+    margin-right: 2px;
+}
+.valorEquipo2{
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    border-right: 5px rgb(0, 1, 37) solid;
+}
+.valorEquipo1{
+    border-top-left-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    border-left: 5px rgb(0, 1, 37) solid;
+}
+.TipoEstadistica{
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    background-image: linear-gradient(to left top, rgba(28, 28, 28), rgba(50, 50, 51));
+    font-size: 2vw;
+    padding: 2px;
+    text-shadow: 1px 1px 1px rgb(0, 71, 6);
+    border-bottom: 3px rgb(66, 66, 66) solid;
+    margin-bottom: 2px;
+    margin-top: inherit;
+
+}
+.cajita{
+    width: 50%;
+    text-align: right;
+    display: table-cell;
+    vertical-align:text-top;
+}
+.cajita2{
+    width: 50%;
+    text-align: left;
+    display: table-cell;
+    vertical-align:text-top;
+}
+.metioGol{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+SECCION DE TORNEOS
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+.contTorneo{
+    overflow: auto;
+    background-color: #084B8AD1;
+    text-align: left;
+    margin: 1vw;
+    padding: 3vw;
+    justify-content: center;
+    align-items: center;
+    display: table;
+    border-radius: 1vw;
+}
+.contNivel-Final{
+    display: flex;
+    justify-content: center;
+}
+.titulo-faceTorneo{
+    color: white;
+    font-size: 2em;
+}
+.titulo-grupo{
+    font-family: 'Permanent Marker', cursiva;
+    color: rgb(255, 6, 6);
+    font-size: 4em;
+    text-shadow: 2px 2px 4px white;
+}
+.contNivel{
+    display: table-cell;
+    vertical-align: middle;
+    width: 25vw;
+    height: 100%;
+    text-align: center;
+}
+/* casilla de equipo1 vs equipo2*/
+.contPartido-torneo{
+    margin: 1vw;
+    position: relative;
+    width: 23vw;
+    height: 15vw;
+    text-align: left;
+    background-color: #088A85;
+    border-radius: 2vw;
+    font-family: cursive;
+}
+.equipo1-torneo, .equipo2-torneo{
+    position: absolute;
+    display: inline-block;
+    background-color: #0B615E;
+    text-align: center;
+    color: white;
+    width: 70%;
+    font-size: 2vw;
+    padding: 1vw;
+    margin: 1vw;
+    
+}
+.resultadoEquipo1-torneo, .resultadoEquipo2-torneo{
+    position: absolute;
+    display: inline-block;
+    padding: 1vw;
+    margin: 1vw;
+    font-size: 4vw;
+    color: #0101DF;
+    font-weight: bold;
+    
+}
+.equipo1-torneo{
+    top: 8%;
+    transform: translateY(-8%);
+}
+.equipo2-torneo{
+    bottom: 3%;
+    transform: translateY(-3%);
+}
+.resultadoEquipo1-torneo{
+    top: -2%;
+    right: 4%;
+    transform: translate(2%, -4%);
+}
+.resultadoEquipo2-torneo{
+    bottom: -7%;
+    right: 5%;
+    transform: translate(7%, -5%);
+}
+.vs{
+    position: absolute;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #01DF01D1;
+    top: 50%;
+    left: 38%;
+    transform: translate(-38%, -50%);
+    z-index: 1;
+    text-shadow: 3px 3px 1px #FFFF00D1;
+}
+.separ{
+    position: absolute;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #0101DF;
+    top: 48%;
+    right: 11%;
+    transform: translate(-11%, -48%);
+}
+/* scroll personalizado*/
+::-webkit-scrollbar{
+    width: 15px;
+    background-color: #7401DF;
+}
+::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px #7401DF;
+    border-radius: 10px;
+    background-color: #BE81F7;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #7401DF;
+    background-image: -webkit-linear-gradient(90deg,transparent,#380B61 50%,transparent,transparent)
+}
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+SECCION PANEL DE CONTROL
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+.textarea{
+    display: block;
+    width: 80%;
+    height: 20vw;
+}
+.estilo-Select{
+    width: 30%;
+    display: block;
+    font-size: 2vw;
+    background-color: rgba(255, 255, 255, 0.137);
+    color: white;
+    border: 1px  rgba(0, 0, 102, 0.85) solid;
+    border-radius: 5px;
+    text-align: center;
+    padding: 3px;
+    font-family: cursive;
+    margin: 8px;
+}
+.estilo-Select option{
+    background-color: #14283b;
+}
+.inputs{
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+.seccionFuncion{
+    background-color: #162533;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+.comboBox-form{
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+.boton{
+    font-size: 2vw;
+    background-image: linear-gradient(to top, rgba(76, 0, 153, 0.85), rgba(102, 0, 204, 0.8));
+    border-color: rgba(51, 0, 102, 0.85);
+    color: white;
+    padding: 5 8 5 8;
+    margin: 5px;
+}
+.contPanelControl{
+    color: white;
+    width: 90%;
+    margin: 1em;
+    background-color: #905a3ab7;
+    padding-bottom: 1em;
+}
+.titulo-rol{
+    text-align: left;
+    padding: 16px;
+    width: 100%;
+    background-color: #18232e;
+    color: white;
+}
+.asideBotones{
+    float: left;
+    margin-left: 10px;
+    width: 25%;
+    min-height: 100%;
+    background-color: #4B2B32;
+    padding: 1em;
+}
+.seccionFunciones{
+    display: inline-block;
+    width: 70%;
+    min-height: 100%;
+    background-color: #233342;
+}
+.btn-estilo{
+
+    color: white;
+    display: block;
+    margin: 5px;
+    width: 80%;
+    background-color: transparent;
+    border: 5px double #b33402;
+    transition: 00.5s;
+}
+.btn-estilo:hover{
+    transition: 00.5s;
+    background-color: #3f242a !important;
+    
+}
+.cont-asideYfunciones{
+    display: inline-block;
+    width: 100%;
+}
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+SECCION DE ENTRENADOR
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+.form-control{
+    text-align: center;
+}
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+SECCION DE ANALISTA
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+.tituloPanel{
+    font-size: 2vw;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    margin: 0;
+    margin-bottom: 5px;
+    width: 80%;
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0.85), rgba(204, 0, 0, 0.8)); 
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-size: 2vw;
+    border-bottom: 5px rgba(115, 0, 0) solid;
+}
+.agregarIncidencia{
+    margin: 10 10 10 0;
+}
+.estadoActual{
+    font-size: 2vw;
+    padding-left: 5px;
+    color: #006600;
+    font-family: cursive;
+}
+.marcarTiempo{
+    width: 100%;
+    background-color: rgba(32, 32, 32, 0.5);
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px black;
+    padding-top: 10px;
+}
+.botonCerrar{
+    font-size: 2.5vw;
+    background-image: linear-gradient(to top, rgb(175, 4, 27), rgb(223, 4, 4));
+    border-color: rgb(204, 0, 0) solid !important;
+    color: white;
+    padding: 5 8 5 8;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 10px;
+    border-radius: 2vw;
+    padding: 1.2vw;
+}
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+FIN DE SECCION PANEL DE CONTROL
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+
+/* ||||||| NUBE DE PRUEBA ||||||| (se hace visible en Deportes, Equipos y seccionEquipo)*/
+
+.nubeDeporte, .nubeEquipo{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: #ff00009c;
+    clip-path: polygon(0 100%, 100% 100%, 100% 15%, 60% 15%, 50% 0, 40% 15%, 0 15%);
+    left: 50%;
+    bottom: -5%;
+    transform: translate( -50%, 10%);
+    border-radius: 2em 2em 1em 1em;
+    border-top: 10px solid #ff0000;
+    border-bottom: 3px solid #ff0000;
+}
+.textoNube{
+    font-size: 1vw;
+    color: #fffb00;
+    padding: 5px;
+    margin: 0;
+}
+/*para deportes*/
+.DivDeporte:hover > .nubeDeporte{
+    display: block;
+    width: 50%;
+}
+/*para equipos*/
+.seccionEquipo:hover > .nubeEquipo{
+    display: block;
+    width: 70%;
+}
+
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+SECCION RESPONSIVE
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+@media only screen and (max-width: 915px){
+    /* 
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    SECCION DE DEPORTES (responsive completo) 
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
+
+    .DivDeporte{
+        text-align: center;
+        width: 80%;
+        height: 130vw;
+    }
+    .DivDeporte .titulo{
+        font-size: 10vw;
+        background-image: url(../img/fondoTitulo.jpg);
+        outline: 4px solid;
+        border-radius: 10px;
+        color: white;
+        opacity: 0.9;
+    }
+    .DivDeporte .texto{
+        border-radius: 10px;
+        border: 1px double;
+        height: 60%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .DivDeporte .texto p{
+        font-size: 4vw;
+        padding:4%;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .DivDeporte:hover{
+        width: 80% !important;
+        height: 130vw !important;
+    }
+    a:hover .DivDeporte .titulo{
+        outline: 4px solid;
+        font-size: 10vw;
+    }
+    a:hover .DivDeporte .texto p{
+        font-size: 4vw;  
+    }
+
+    /*
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    SECCION DE EQUIPOS (responsive completo) 
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
+    .seccionEquipo{
+        margin:2%;
+        width: 80%;
+        height: 50vw;
+    }
+    .textoEquipo{
+        transform: translate( -50%, -50%);
+        font-size: 5vw;
+    }
+    .seccionEquipo:hover{
+        width: 80%;
+        height: 50vw;
+    }
+    
+    /* 
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    SECCION DE EQUIPO (seccion donde se muestra la info del equipo)
+    (responsive completo)
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
+    .contCentrado .listaContenedor #listaEquipo a .contenedorLista-li{
+        min-height: 13vw; 
+    }
+    .contCentrado .listaContenedor #listaEquipo a #fotoPerfil{
+        width: 13vw;
+        height: 13vw;
+    }
+    .contCentrado .listaContenedor #listaEquipo a .contCamiseta #camiseta{
+        width: 13vw;
+        height: 13vw;
+    }
+    .contCentrado .listaContenedor #listaEquipo a .contenedorLista-li .contCamiseta{
+        width: 13vw;
+        height: 13vw;
+    }
+    .contCentrado .listaContenedor #listaEquipo a .contenedorLista-li .nameJugador{
+        font-size: 4.5vw;
+    }
+    .contCentrado .listaContenedor #listaEquipo a .contenedorLista-li .contCamiseta .textoCamiseta{
+        font-size: 4vw;
+    }
+    .contCentrado h2{
+        font-size: 5vw;
+    }
+    .contCentrado #fotoEquipo{
+        width: 20vw;
+        height: 17vw;
+    }
+
+    /* 
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    SECCION DE JUGADOR (responsive completo)
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
+    #imgPerfil{
+        float: none !important;
+        width: 60% !important;
+    }
+    #listaEstadisticas{
+        text-align: center !important;
+    }
+    .contenidoJugador #listaEstadisticas .tipo{
+        font-size: 3.5vw;
+        width: 60%;
+    }
+    .contenidoJugador #listaEstadisticas .valorEstadistica{
+        font-size: 3.5vw;
+        width: 25%;
+    }
+    .contenidoJugador{
+        margin: 20px;
+    }
+
+    /*
+    ||||||||||||||||||||||||||||||||||||||||||||
+    SECCION DE PARTIDOS Y TORNEOS (ambas interfaces tienen un diseño similar): 
+    (responsive completo)
+    ||||||||||||||||||||||||||||||||||||||||||||
+    */
+    .contenedorTorneo{
+        width: 90vw;
+        height: 25vw;
+    }
+    .contenedorPartido{
+        width: 80%;
+        height: 50vw;
+    }
+    .px-2{
+        font-size: 6vw;
+    }
+    .px-edit{
+        font-size: 4vw;
+    }
+    .botonPartido, .botonTorneo{
+        font-size: 5vw;
+    }
+    .partidosDisputados, .torneosDisputados{
+        font-size: 4vw;
+    }
+    .partidosProximos, .torneosProximos{
+        font-size: 4vw;
+    }
+
+    /* 
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    SECCION DE TORNEOS (responsive completo)
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
+    .contTorneo{
+        overflow: none;
+        background-color: #084B8AD1;
+        text-align: Center;
+        padding: 3vw;
+        display: inline-block;
+        width: 95%;
+    }
+    .contNivel{
+        display: inline;
+        height: 100%;
+    }
+    .contNivel-Final{
+        display: flex;
+        justify-content: center;
+    }
+    .grupoA{
+        margin-bottom: 2em;
+    }
+    .grupoB{
+        margin-bottom: 2em;
+    }
+    .titulo-faceTorneo{
+        color: white;
+        font-size: 7vw;
+        margin-top: 1.5em;
+    }
+    .titulo-grupo{
+        font-family: 'Permanent Marker', cursiva;
+        color: rgb(255, 6, 6);
+        font-size: 10vw;
+        text-shadow: 2px 2px 4px white;
+    }
+    .contPartido-torneo{
+        display: inline-block;
+        width: 80%;
+        height: 35vw;
+    }
+    .equipo1-torneo{
+        font-size: 7.5vw;
+        top: 8%;
+        transform: translateY(-8%);
+    }
+    .resultadoEquipo1-torneo{
+        font-size: 10vw;
+        top: 2%;
+        right: 8%;
+        transform: translate(-2%, -8%);
+    }
+    .equipo2-torneo{
+        font-size: 7.5vw;
+        bottom: 3%;
+        transform: translateY(-3%);
+    }
+    .resultadoEquipo2-torneo{
+        position: absolute;
+        display: inline-block;
+        font-size: 10vw;
+        bottom: -7%;
+        right: 9%;
+        transform: translate(7%, -9%);
+    }
+    .vs{
+        font-size: 10vw;
+        top: 50%;
+        left: 35%;
+        transform: translate(-35%, -50%);
+    }
+    .separ{
+        margin: inherit;
+        font-size: 10vw;
+        top: 42%;
+        right: 9%;
+        transform: translate(-9%, -42%);
+    }
+
+    /* 
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    SECCION DE deportes_info (responsive completo)
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
+    .contenedorInfoDeporte{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    /* 
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    SECCION DE PARTIDO (ESTADISTICAS)
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
+    .tituloInfo{
+        width: 80%;
+        font-size: 5vw;
+    }
+    .contInfoPartido img{
+        width: 17vw;
+        height: 17vw;
+    }
+    .equipo1{
+        font-size: 5vw;
+    }
+    .separador{
+        font-size: 7vw;
+    }
+    .equipo2{
+        font-size: 5vw;
+    }
+    .puntajeEquipo2{
+        font-size: 6vw;
+    }
+    .puntajeEquipo1{
+        font-size: 6vw;
+    }
+    .valorEquipo1{
+        width: 20%;
+        font-size: 5vw;
+        padding: 4px;
+    }
+    .valorEquipo2{
+        width: 20%;
+        font-size: 5vw;
+        padding: 4px;
+    }
+    .TipoEstadistica{
+        width: 45%;
+        font-size: 5vw;
+        padding: 5px;
+    }
+    .fila{
+        display: block;
+    }
+
+    /* 
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    SECCION DE PANEL DE CONTROL  (tablas y elementos de funciones responsive)
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
+    .estilo-Select{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .estilo-Select option{
+        display: block !important;
+        font-size: 3vw;
+    }
+    .boton{
+        font-size: 3.5vw;
+    }
+    .tituloPanel{
+        font-size: 3.5vw;
+        width:  100%;
+    }
+    .asideBotones{
+        display: block;
+        min-height: inherit;
+        float: none;
+        width: 95%;
+        margin: inherit;
+        margin-bottom: 5px;
+    }
+    .seccionFunciones{
+        width: 95%;
+    }
+    .table-res{
+        width: 99%;
+    }
+    .table-res tr{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+    .table-res thead{
+        display:none;
+    }
+    .table-res td[data-titulo]{
+        display: flex; 
+    }
+    .table-res td[data-titulo]::before{
+        content: attr( data-titulo );
+        width: 50%;
+        color: rgb(236, 218, 184);
+        font-weight: bold;
+        margin-right: 1em;
+    }
+    .botonCerrar{
+        font-size: 6vw;
+    }
+
+    /*nube*/
+    .nubeEquipo, .nubeDeporte{
+        display: block;
+        width: 70%;
+        bottom: -5%;
+    }
+    .nubeEquipo .textoNube{
+        font-size: 4vw;
+    }
+    .nubeDeporte .textoNube{
+        font-size: 4vw;
+    }
+    
+
+/*
+
+	En este documento CSS se encuentra un sistema de comentarios,
+	en el cual cada miembro del equipo se identifica mediante símbolos
+	de apertura y cierre de dichos comentarios.
+
+	<> -- Iñaki y Óscar
+	|| -- Mathias
+	// -- Damián
+
+*/
+}
