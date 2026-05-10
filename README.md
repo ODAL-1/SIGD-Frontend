@@ -57,5 +57,8 @@ Integrantes:
 - Óscar Rodríguez
 - Alan García
 
-Coordinador:	Damián Páez
-Sub-Coordinador:	Matías De León 
+Coordinador: 
+- Damián Páez
+
+Sub-Coordinador:
+- Matías De León 
