@@ -1,4 +1,4 @@
-                                                                                                        -- Este proyecto ha sido el proyecto de egreso en Educación Media informática --
+         -- Este proyecto ha sido el proyecto de egreso en Educación Media informática --
 
 
 S.I.G.D. - Sistema de Información y Gestión Deportiva
